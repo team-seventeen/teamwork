@@ -1,0 +1,23 @@
+if (input == 6) {
+                        System.out.println("系统已退出，欢迎下次使用。。。");
+                        System.exit(0);
+                    }
+                } else {
+                    System.out.println("----------------------------------");
+                    System.out.println("输入有误，系统退出。");
+                    System.exit(0);
+                }
+            }
+        //输入时，如果输入的不是数字，会捕捉InputMismatchException异常并提示“输入有误，系统退出”
+        } catch(InputMismatchException e) {  
+            System.out.println("----------------------------------");
+            System.out.println("输入有误，系统退出。");
+        } catch(Exception e) {
+            System.out.println("----------------------------------");
+            System.out.println("其他错误。");
+            e.printStackTrace();
+        } finally {   
+            System.exit(0);   //退出系统
+        }
+    }
+}
