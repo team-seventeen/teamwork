@@ -1,0 +1,49 @@
+// 5、修改学生信息
+                    if (input == 5) {
+                        if (list.isEmpty() == true) {
+                            System.out.println("您还没有添加学生信息。");
+                        } else {
+                            System.out.print("请输入你要修改的学生姓名：");
+                            String name1 = sc.next();
+                            List<String> listname = new ArrayList<String>();
+                            for (int c = 0; c < list.size(); c++) {
+                                listname.add(list.get(c).getName());
+                            }
+                            for (int q = 0; q < list.size(); q++) {
+                                if (listname.contains(name1)) {
+                                    if (list.get(q).getName().equals(name1)) {
+                                        System.out.print("此学生原信息:");
+                                        //打印要修改的学生信息的原信息
+                                        System.out.println(list.get(q).toString());   
+                                        System.out.println("请修改此学生信息：\n");
+                                        System.out.println("----------------------------------");
+                                        System.out.print("请重新输入学生学号：\n");
+                                        int ID = sc.nextInt();
+                                        System.out.print("请重新输入学生姓名：\n");
+                                        String name = sc.next();
+                                        System.out.print("请重新输入学生性别：\n");
+                                        boolean gender = sc.next() != null;
+                                        if(gender == true){  gendermain= "男"; } else{  gendermain= "女"; } 
+                                        System.out.print("请重新输入学生出生日期：\n");
+                                        String birDate = sc.next();
+                                        System.out.print("请重新输入学生年龄：\n");
+                                        String age = sc.next();
+                                        list.remove(q);   //先删除该学生所有的信息
+                                        
+                                        //重新添加该学生信息
+                                        list.add(new studentH( id,  ID,  name, gender,birDate,age,gendermain));  
+                                        System.out.println("修改成功。");
+                                        break;
+                                    } else {
+                                        continue;
+                                    }
+
+                                } else {
+                                    System.out.println("没有该学生信息。");
+                                    break;
+                                }
+
+                            }
+                        }       
+                        System.out.println("----------------------------------");
+                    }
