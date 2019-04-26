@@ -1,0 +1,11 @@
+    public studentH() {
+
+    }
+    public studentH(int id, int ID, String name, boolean gender, String birDate,String age,String gendermain) {
+        this.id = id;
+        this.ID = ID;
+        this.name = name;
+        this.gender = gender;
+        this.birDate=birDate;
+        this.age=age;
+        this.gendermain= gendermain;
