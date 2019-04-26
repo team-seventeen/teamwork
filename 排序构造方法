@@ -1,0 +1,11 @@
+Star-Drift 2019/4/26 21:32:42
+//实现Comparable接口，重写CompareTo方法，用于功能菜单中的“1、查询所有学生信息”，根据学号进行排序
+public class studentH implements Comparable<studentH>{   
+    //属性和构造方法可以根据题目需求进行更改
+    private int id;   //序号
+    private int ID;//学号
+    private String name;   //姓名
+    private boolean gender;   //班级
+    private String birDate;//出生日期
+    private String age;//年龄
+    private String gendermain;//年龄
