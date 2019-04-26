@@ -1,0 +1,44 @@
+
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public int getID() {
+        return ID;
+    }
+    public void setID(int ID) {
+        this.ID = ID;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public boolean getgender() {
+        return gender;
+    }
+    public void setgender(boolean gender) {
+        this.gender = gender;
+    }
+    public String getbirDate() {
+        return birDate;
+    }
+    public void setbirDate(String birDate) {
+        this.birDate = birDate;
+    }
+    public String getage() {
+        return age;
+    }
+    public void setage(String age) {
+        this.age = age;
+    }
+    public String getgendermain() {
+        return gendermain;
+    }
+    public void setgendermain(String gendermain) {
+        this.gendermain = gendermain;
+    }
+@Override
