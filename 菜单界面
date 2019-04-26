@@ -1,0 +1,44 @@
+package JuyThirteenthJStuMangeSys;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.InputMismatchException;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
+/**
+ * @date 2018/7/13
+ * @author HCQ
+ * @see 学生信息管理系统
+ */
+public class StudentManageSystem {
+    private static Scanner sc;
+
+    public static void main(String[] args) {
+        //简单的欢迎界面
+        System.out.println("---------------------------------");
+        System.out.println("\t" + "欢迎进入学生管理系统 ");
+        System.out.println("---------------------------------");
+
+        List<studentH> list = new LinkedList<studentH>();
+        sc = new Scanner(System.in);
+        int id = 0;
+        String gendermain;
+        try {
+            while (true) {
+                //功能菜单界面，每次使用一个功能时，都会把功能菜单打印一次，便于使用者查询功能对应的数字
+                System.out.println("功能菜单：");
+                System.out.println("----------------------------------");
+                System.out.println("1、查询所有学生信息");
+                System.out.println("2、根据姓名查询信息");
+                System.out.println("3、增加学生信息");
+                System.out.println("4、删除学生信息");
+                System.out.println("5、修改学生信息");
+                System.out.println("6、退出系统");
+                System.out.println("(提示：为了您的使用方便，请在使用系统前，最大化控制台。)");
+                System.out.println("----------------------------------");
+                System.out.print("请输入对应的数字进行操作:");
+                int input = sc.nextInt();   //输入数字选择功能
+
+                if(input>0 && input<7) {   //输入的数字在1-6时，能执行功能，否则系统退出
+                    System.out.println("---------------------------------");
