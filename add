@@ -1,0 +1,24 @@
+ if (input == 3) {
+                     
+                        int num = 1;
+                        System.out.println("----------------------------------");
+                        for (int w = 0; w < num; w++) {
+                            System.out.println("请添加学生信息\n");
+                            System.out.println("----------------------------------");
+                            System.out.print("请输入学生学号：\n");
+                            int ID = sc.nextInt();
+                            System.out.print("请输入学生姓名：\n");
+                            String name = sc.next();
+
+                            System.out.print("请输入学生性别：\n");
+                            boolean gender = sc.next() != null;
+                            if(gender == true){ gendermain= "男"; } else{ gendermain= "女"; } 
+                            System.out.print("请输入学生出生年月：\n");
+                            String birDate = sc.next();
+                            System.out.print("请输入学生年龄：\n");
+                            String age = sc.next();
+                            list.add(new studentH(id, ID, name, gender,birDate,age,gendermain));
+                            System.out.println("添加成功。");
+                            System.out.println("---------------------------------");
+                        }
+}
