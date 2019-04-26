@@ -1,0 +1,27 @@
+if (input == 4) {
+                        if (list.isEmpty() == true) {
+                            System.out.println("您还没有添加学生信息。");
+                        } else {
+                            System.out.print("请输入你要删除的学生姓名：");
+                            String name1 = sc.next();
+                            List<String> listname = new ArrayList<String>();
+                            for (int c = 0; c < list.size(); c++) {
+                                listname.add(list.get(c).getName());
+                            }
+                            for (int q = 0; q < list.size(); q++) {
+                                if (listname.contains(name1)) {
+                                    if ( list.get(q).getName().equals(name1)) {
+                                        list.remove(q);
+                                        System.out.println("删除成功。");
+                                        break;
+                                    } else {
+                                        continue;
+                                    }
+                                } else {
+                                    System.out.println("没有该学生信息。");
+                                    break;
+                                }
+                            }
+                        }
+                        System.out.println("---------------------------------");
+                    }
