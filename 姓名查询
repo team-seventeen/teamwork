@@ -1,0 +1,28 @@
+// 2、根据姓名查询信息
+                    if (input == 2) {
+                        if (list.isEmpty() == true) {
+                            System.out.println("您还没有添加学生信息。");
+                        } else {
+                            System.out.print("请输入你要查找的学生姓名：\n");
+                            String name1 = sc.next();
+                            
+                            List<String> listname = new ArrayList<String>();
+                            for (int c = 0; c < list.size(); c++) {
+                                listname.add(list.get(c).getName());
+                            }
+                            for (int q = 0; q < list.size(); q++) {
+                                if (listname.contains(name1)) {
+                                    if (list.get(q).getName().equals(name1)) {
+                                        System.out.println(list.get(q).toString());
+                                        break;
+                                    } else {
+                                        continue;
+                                    }
+                                } else {
+                                    System.out.println("没有该学生信息。");
+                                    break;
+                                }
+                            }
+                        }
+                        System.out.println("---------------------------------");
+                    }
