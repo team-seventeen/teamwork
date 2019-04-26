@@ -1,0 +1,14 @@
+package JuyThirteenthJStuMangeSys;
+
+import java.util.Comparator;
+/**
+ * @date 2019/4/20
+ * @author HCQ
+ * @see 学生信息管理系统
+ */
+ //如果进行比较排序，需要自定义一个比较类，见学生信息管理系统类的“1、查询所有学生信息”的具体代码
+public class MyComparator implements Comparator<studentH>{
+    public int compare(studentH o1, studentH o2) {
+        return o1.getID() - o2.getID();
+    }
+}
