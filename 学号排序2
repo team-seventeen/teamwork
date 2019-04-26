@@ -1,0 +1,6 @@
+@Override
+    public int compareTo(studentH o) {   //重写一下compareTo方法根据学号进行排序
+        // TODO Auto-generated method stub
+        return this.ID - o.getID();
+    }
+}
