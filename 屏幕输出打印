@@ -1,3 +1,6 @@
-public String toString() {   //重写一下toString方法进行打印输出方法
+public String toString() {             //重写toString方法进行打印输出方法
+
         return "学生"+id+" [" + " 学号=" + ID + " 姓名=" + name + ", 性别=" + gendermain + ", 出生日期=" + birDate +" , 年龄=" + age + "]";
+        
+        //返回字符串值，方便打印学生信息条
     }
