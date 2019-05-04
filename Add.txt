@@ -1,24 +1,25 @@
 if (input == 3) {
                      
-                        int num = 1;
-                        System.out.println("----------------------------------");
-                        for (int w = 0; w < num; w++) {
-                            System.out.println("ÇëÌí¼ÓÑ§ÉúĞÅÏ¢\n");
+                        final int num = 1;        
+                        System.out.println("----------------------------------");    //æ‰“å°èœå•æ ¼å¼
+                        
+                        for (int w = 0; w < num; w++) {            //å°†wå£°æ˜ä¸ºå¸¸æ•°å˜é‡ï¼Œåˆ™æ­¤æ—¶å…¶åªèƒ½ä¸€æ¬¡å¢åŠ ä¸€ä¸ªå­¦ç”Ÿçš„å­¦ç”Ÿä¿¡æ¯ï¼Œç¬¦åˆé¡¹ç›®è¦æ±‚ã€‚
+                            System.out.println("è¯·æ·»åŠ å­¦ç”Ÿä¿¡æ¯\n"); 
                             System.out.println("----------------------------------");
-                            System.out.print("ÇëÊäÈëÑ§ÉúÑ§ºÅ£º\n");
+                            System.out.print("è¯·è¾“å…¥å­¦ç”Ÿå­¦å·ï¼š\n");
                             int ID = sc.nextInt();
-                            System.out.print("ÇëÊäÈëÑ§ÉúĞÕÃû£º\n");
+                            System.out.print("è¯·è¾“å…¥å­¦ç”Ÿå§“åï¼š\n");
                             String name = sc.next();
 
-                            System.out.print("ÇëÊäÈëÑ§ÉúĞÔ±ğ£º\n");
+                            System.out.print("è¯·è¾“å…¥å­¦ç”Ÿæ€§åˆ«ï¼š\n");
                             boolean gender = sc.next() != null;
-                            if(gender == true){ gendermain= "ÄĞ"; } else{ gendermain= "Å®"; } 
-                            System.out.print("ÇëÊäÈëÑ§Éú³öÉúÄêÔÂ£º\n");
+                            if(gender == true){ gendermain= "ç”·"; } else{ gendermain= "å¥³"; } 
+                            System.out.print("è¯·è¾“å…¥å­¦ç”Ÿå‡ºç”Ÿå¹´æœˆï¼š\n");
                             String birDate = sc.next();
-                            System.out.print("ÇëÊäÈëÑ§ÉúÄêÁä£º\n");
+                            System.out.print("è¯·è¾“å…¥å­¦ç”Ÿå¹´é¾„ï¼š\n");
                             String age = sc.next();
                             list.add(new studentH(id, ID, name, gender,birDate,age,gendermain));
-                            System.out.println("Ìí¼Ó³É¹¦¡£");
-                            System.out.println("---------------------------------");
+                            System.out.println("æ·»åŠ æˆåŠŸ");      //æˆåŠŸæ·»åŠ å­¦ç”Ÿä¿¡æ¯åï¼Œæç¤ºè¯è¯­å¥ã€‚
+                            System.out.println("---------------------------------");      //æ‰“å°èœå•æ ¼å¼
                         }
 }
