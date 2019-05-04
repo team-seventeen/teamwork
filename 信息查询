@@ -1,17 +1,19 @@
-                   // 1、查询所有学生信息
+         // 1、查询所有学生信息
                     if (input == 1) {
-                        if (list.isEmpty() == true) {   //判断集合内是否存在学生对象的信息
+                        if (list.isEmpty() == true) {   
+                  //判断数据是否为空
                             System.out.println("您还没有添加学生信息。");
-                        } else {
+                        } 
+                        else{
                             System.out.println("学生信息表");
                             System.out.println("---------------------------------");
-                            for (int j = 0; j < list.size(); j++) {
-                              //自然排序，实现了Comparable接口并重写了CompareTo方法才能调用此方法
-                                Collections.sort(list); 
-                              //比较排序，必须定义另外一个自定义的比较类，这里比较类的类名为MyComparator
-//                                                          Collections.sort(list, new MyComparator()); 
-                                                            System.out.println(list.get(j).toString());
+                                for (int j = 0; j < list.size(); j++) {
+                 //自然排序，实现了Comparable接口
+                                   Collections.sort(list); 
+                 //比较排序，必须定义另外一个自定义的比较类，这里比较类的类名为MyComparator
+                                   Collections.sort(list, new MyComparator()); 
+                                   System.out.println(list.get(j).toString());
                                                     }
                                             }
-                                            System.out.println("---------------------------------");
+                                    System.out.println("---------------------------------");
                                     }
