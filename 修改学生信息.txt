@@ -1,45 +1,53 @@
-// 5¡¢ĞŞ¸ÄÑ§ÉúĞÅÏ¢
+// 5ã€ä¿®æ”¹å­¦ç”Ÿä¿¡æ¯
                     if (input == 5) {
-                        if (list.isEmpty() == true) {
-                            System.out.println("Äú»¹Ã»ÓĞÌí¼ÓÑ§ÉúĞÅÏ¢¡£");
+                    
+                        if (list.isEmpty() == true)    //åˆ¤æ–­listä¸èƒ½ä¸ºç©º
+                        {  
+                            System.out.println("æ‚¨è¿˜æ²¡æœ‰æ·»åŠ å­¦ç”Ÿä¿¡æ¯ã€‚");   //è‹¥å­¦ç”Ÿä¿¡æ¯ä¸ºç©ºåˆ™æç¤ºæ­¤ä¿¡æ¯
                         } else {
-                            System.out.print("ÇëÊäÈëÄãÒªĞŞ¸ÄµÄÑ§ÉúĞÕÃû£º");
+                            System.out.print("è¯·è¾“å…¥ä½ è¦ä¿®æ”¹çš„å­¦ç”Ÿå§“åï¼š");
                             String name1 = sc.next();
-                            List<String> listname = new ArrayList<String>();
-                            for (int c = 0; c < list.size(); c++) {
-                                listname.add(list.get(c).getName());
+                            List<String> listname = new ArrayList<String>();  
+                            
+                            for (int c = 0; c < list.size(); c++) 
+                            {
+                                listname.add(list.get(c).getName());       //å°†å·²æœ‰çš„å­¦ç”Ÿä¿¡æ¯è¡¨å†…åå­—åŠ å…¥æ–°å®šä¹‰çš„è¡¨ä¸­
                             }
-                            for (int q = 0; q < list.size(); q++) {
+                            
+                            for (int q = 0; q < list.size(); q++) {       //è¿›è¡Œå§“åæ¯”å¯¹
+                            
                                 if (listname.contains(name1)) {
-                                    if (list.get(q).getName().equals(name1)) {
-                                        System.out.print("´ËÑ§ÉúÔ­ĞÅÏ¢:");
-                                        //´òÓ¡ÒªĞŞ¸ÄµÄÑ§ÉúĞÅÏ¢µÄÔ­ĞÅÏ¢
+                                
+                                    if (list.get(q).getName().equals(name1)) {   //è‹¥å§“ååŒ¹é…ï¼Œåˆ™å¯¹è¿™æ¡å­¦ç”Ÿä¿¡æ¯è¿›è¡Œä¿®æ”¹
+                                    
+                                        System.out.print("æ­¤å­¦ç”ŸåŸä¿¡æ¯:");
+                                        //æ‰“å°è¦ä¿®æ”¹çš„å­¦ç”Ÿä¿¡æ¯çš„åŸä¿¡æ¯
                                         System.out.println(list.get(q).toString());   
-                                        System.out.println("ÇëĞŞ¸Ä´ËÑ§ÉúĞÅÏ¢£º\n");
+                                        System.out.println("è¯·ä¿®æ”¹æ­¤å­¦ç”Ÿä¿¡æ¯ï¼š\n");
                                         System.out.println("----------------------------------");
-                                        System.out.print("ÇëÖØĞÂÊäÈëÑ§ÉúÑ§ºÅ£º\n");
+                                        System.out.print("è¯·é‡æ–°è¾“å…¥å­¦ç”Ÿå­¦å·ï¼š\n");
                                         int ID = sc.nextInt();
-                                        System.out.print("ÇëÖØĞÂÊäÈëÑ§ÉúĞÕÃû£º\n");
+                                        System.out.print("è¯·é‡æ–°è¾“å…¥å­¦ç”Ÿå§“åï¼š\n");
                                         String name = sc.next();
-                                        System.out.print("ÇëÖØĞÂÊäÈëÑ§ÉúĞÔ±ğ£º\n");
-                                        boolean gender = sc.next() != null;
-                                        if(gender == true){  gendermain= "ÄĞ"; } else{  gendermain= "Å®"; } 
-                                        System.out.print("ÇëÖØĞÂÊäÈëÑ§Éú³öÉúÈÕÆÚ£º\n");
+                                        System.out.print("è¯·é‡æ–°è¾“å…¥å­¦ç”Ÿæ€§åˆ«ï¼š\n");
+                                        boolean gender = sc.next() != null;               //å¸ƒå°”å‹gender ä¸èƒ½ä¸ºç©º
+                                        if(gender == true){  gendermain= "ç”·"; } else{  gendermain= "å¥³"; } 
+                                        System.out.print("è¯·é‡æ–°è¾“å…¥å­¦ç”Ÿå‡ºç”Ÿæ—¥æœŸï¼š\n");
                                         String birDate = sc.next();
-                                        System.out.print("ÇëÖØĞÂÊäÈëÑ§ÉúÄêÁä£º\n");
+                                        System.out.print("è¯·é‡æ–°è¾“å…¥å­¦ç”Ÿå¹´é¾„ï¼š\n");
                                         String age = sc.next();
-                                        list.remove(q);   //ÏÈÉ¾³ı¸ÃÑ§ÉúËùÓĞµÄĞÅÏ¢
+                                        list.remove(q);   //å…ˆåˆ é™¤è¯¥å­¦ç”Ÿæ‰€æœ‰çš„ä¿¡æ¯
                                         
-                                        //ÖØĞÂÌí¼Ó¸ÃÑ§ÉúĞÅÏ¢
+                                        //é‡æ–°æ·»åŠ è¯¥å­¦ç”Ÿä¿¡æ¯
                                         list.add(new studentH( id,  ID,  name, gender,birDate,age,gendermain));  
-                                        System.out.println("ĞŞ¸Ä³É¹¦¡£");
+                                        System.out.println("ä¿®æ”¹æˆåŠŸã€‚");
                                         break;
                                     } else {
                                         continue;
                                     }
 
                                 } else {
-                                    System.out.println("Ã»ÓĞ¸ÃÑ§ÉúĞÅÏ¢¡£");
+                                    System.out.println("æ²¡æœ‰è¯¥å­¦ç”Ÿä¿¡æ¯ã€‚");
                                     break;
                                 }
 
