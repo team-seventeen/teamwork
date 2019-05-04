@@ -1,27 +1,33 @@
 if (input == 4) {
                         if (list.isEmpty() == true) {
-                            System.out.println("����û������ѧ����Ϣ��");
-                        } else {
-                            System.out.print("��������Ҫɾ����ѧ��������");
+                            System.out.println("您还没有添加学生信息。");   //若学生信息空，则显示此提醒语句
+                        } 
+                        else{
+                            System.out.print("请输入你要删除的学生姓名：");  //根据姓名删除学生信息
                             String name1 = sc.next();
                             List<String> listname = new ArrayList<String>();
-                            for (int c = 0; c < list.size(); c++) {
+                            for (int c = 0; c < list.size(); c++) 
+                            {
                                 listname.add(list.get(c).getName());
                             }
-                            for (int q = 0; q < list.size(); q++) {
+                            for (int q = 0; q < list.size(); q++)
+                            {
                                 if (listname.contains(name1)) {
+                                    
                                     if ( list.get(q).getName().equals(name1)) {
                                         list.remove(q);
-                                        System.out.println("ɾ���ɹ���");
+                                        System.out.println("删除成功。");       //提示删除成功
                                         break;
                                     } else {
                                         continue;
                                     }
                                 } else {
-                                    System.out.println("û�и�ѧ����Ϣ��");
-                                    break;
+                                    System.out.println("没有该学生信息。");     //若没有相应学生姓名与输入学生姓名
+                                    break;                                     //则输出该提醒语句
                                 }
-                            }
+                                
+                           }
+                           
                         }
-                        System.out.println("---------------------------------");
+                        System.out.println("---------------------------------");//打出菜单格式
                     }
